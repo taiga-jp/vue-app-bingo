@@ -173,10 +173,13 @@ export default {
       false,
       false
     ],
-    totalNum: 75,
+    totalNum: 0,
     currentNum: 0,
     startState: true
   }),
+  created: function () {
+    this.totalNum = this.numList.length
+  },
   methods: {
     changeCurrentNum: function() {
       const rnd = Math.floor(Math.random() * this.numList.length);
